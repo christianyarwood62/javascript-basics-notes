@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Conditionals: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <section class="preview"></section>
+
+    
+    <script>
+    function add7(number) {
+        return (7 + number)
+    }
+    
+    function multiply(num1, num2) {
+        return (num1 * num2)
+    }
+
+    function capitilise(word) {
+        const firstLetter = word.charAt(0)
+        const capFirstLetter = firstLetter.toUpperCase()
+        const remainingWord = word.slice(1)
+        return (capFirstLetter + remainingWord)
+    }
+
+    function lastLetter(string) {
+        return string.slice(-1)
+    }
+    </script>
+
+  </body>
+
+</html>
