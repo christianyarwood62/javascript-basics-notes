@@ -13,7 +13,6 @@
         box-sizing: border-box;
       }
     </style>
-    <link rel="stylesheet" href="../styles.css" />
   </head>
 
   <body>
@@ -31,10 +30,19 @@
 
     // Add your code here
 
-    // Don't edit the code below here!
+    let marker =  document.createElement('li');
 
+    for (item in myArray) {
+     marker =  document.createElement('li');
+     marker.textContent = myArray[item];
+     list.appendChild(marker);
+    }
+
+    // Don't edit the code below here!
+    
     const section = document.querySelector('section');
     section.appendChild(list);
+    
   </script>
 
 </html>
