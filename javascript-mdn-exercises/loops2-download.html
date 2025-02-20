@@ -25,7 +25,7 @@
 
   </body>
   <script>
-    const name = 'Mustafa';
+    const name = 'Tina';
     const para = document.createElement('p');
 
     const phonebook = [
@@ -40,6 +40,14 @@
     ]
 
     // Add your code here
+    for (let i = 0; i < phonebook.length; i++) {
+      if (phonebook[i].name === name) {
+        para.textContent = `${name}'s number is ${phonebook[i].number}.`;
+        break;
+      } else if (phonebook[i].name !== name) {
+        para.textContent = `Contact not found.`;
+      }
+    }
 
     // Don't edit the code below here!
     const section = document.querySelector('section');
