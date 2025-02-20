@@ -44,7 +44,7 @@
       if (phonebook[i].name === name) {
         para.textContent = `${name}'s number is ${phonebook[i].number}.`;
         break;
-      } else if (phonebook[i].name !== name) {
+      } else {
         para.textContent = `Contact not found.`;
       }
     }
