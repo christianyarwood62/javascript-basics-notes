@@ -32,12 +32,12 @@
 
     let marker =  document.createElement('li');
 
-    for (item in myArray) {
-     marker =  document.createElement('li');
-     marker.textContent = myArray[item];
-     list.appendChild(marker);
+    for (const item of myArray) {
+      const listItem = document.createElement('li');
+      list.appendChild(listItem);
+      listItem.textContent = item;
     }
-
+    
     // Don't edit the code below here!
     
     const section = document.querySelector('section');
