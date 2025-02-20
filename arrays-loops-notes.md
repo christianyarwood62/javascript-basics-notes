@@ -150,3 +150,12 @@ for (const person of people) {
 refused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + '.';
 admitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + '.';
 ```
+
+# Labels for breaks/continues:
+- useful to break out of multiple nested loops
+- A label is an identifier with a colon before a loop::
+```
+labelName: for (...) {
+  ...
+}
+```
