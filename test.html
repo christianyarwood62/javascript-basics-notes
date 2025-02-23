@@ -20,14 +20,26 @@
         const header = document.createElement('h3');
         header.classList.add("header");
         header.style.color = 'blue';
-        header.style
         header.textContent = 'Im a blue h3!';
         container.appendChild(header);
 
         const secondcontainer = document.createElement('div');
         secondcontainer.classList.add('secondcontainer');
-        secondcontainer.style.cssText = "color: blue; background: white;"
+        secondcontainer.style.backgroundColor = 'pink';
+        // secondcontainer.style.borderColor = 'black';
+        secondcontainer.style.border = "5px solid black";
         container.appendChild(secondcontainer);
+
+        const header2 = document.createElement('h1');
+        header2.classList.add('header2');
+        header2.style.color = 'black';
+        header2.textContent = 'Im a div';
+        secondcontainer.appendChild(header2);
+
+        const para = document.createElement('p');
+        para.classList.add('para');
+        para.textContent = 'Me too!';
+        secondcontainer.appendChild(para);
     </script>
     
 </body>
