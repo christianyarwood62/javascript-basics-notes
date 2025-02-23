@@ -12,6 +12,12 @@ thirdheading.style.color = 'red';
 container.appendChild(thirdheading);
 ```
 
+# Selecting DOM element:
+- use document.querySelector('element')
+    - this matches with the first instance of that element, e.g. a <p>, or <img>
+- use document.querySelectorAll('element') to select all instances of that element, where it stores each instance in an array-like object called a NodeList
+
+
 # Events:
 - 3 primary ways to do this: **event listeners are the most common**
 1) You can specify function attributes directly on your HTML elements. This clutters the html section which is undesirable.
@@ -36,9 +42,26 @@ btn.addEventListener("click", () => {
 ```
 
 # Get info about event itself:
-- can use a callback function to get info about the event:
+- can use a callback function to get info about the event by using 'function (e)':
 ```
 btn.addEventListener("click", function (e) {
   console.log(e);
+});
+```
+- a call back function is a function that is called into another function as an argument
+- the e parameter is
+
+# Attaching listeners to groups of nodes
+- use a forEach loop to add listeners to each node, e.g.:
+```
+// buttons is a node list. It looks and acts much like an array.
+const buttons = document.querySelectorAll("button");
+
+// we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+  // and for each one we add a 'click' listener
+  button.addEventListener("click", () => {
+    alert(button.id);
+  });
 });
 ```
