@@ -1,12 +1,16 @@
 https://javascript.info/array-methods#transform-an-array
 
 ## Task 1: Translate border-left-width to borderLeftWidth
-Examples:
+Write the function camelize(str) that changes dash-separated words like “my-short-string” into camel-cased “myShortString”.
+That is: removes all dashes, each word after dash becomes uppercased.
+### Examples:
+```
     camelize("background-color") == 'backgroundColor';
     camelize("list-style-image") == 'listStyleImage';
     camelize("-webkit-transition") == 'WebkitTransition';
-
+```
 ### Answer
+```
 function camelize(str) {
   return str
     .split('-') // splits 'my-long-word' into array ['my', 'long', 'word']
@@ -17,7 +21,7 @@ function camelize(str) {
     )
     .join(''); // joins ['my', 'Long', 'Word'] into 'myLongWord'
 }
-
+```
 ## Task 2: Filter a range
 Example:
     let arr = [5, 3, 8, 1];
