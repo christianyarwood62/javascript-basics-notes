@@ -204,6 +204,12 @@ console.log(arr); // Outputs [1, 2, 3, 4, 5], original array is not affected
 ```
 
 ## Reduce method
+- syntax:
+```
+let value = arr.reduce(function(accumulator, item, index, array) {
+  // ...
+}, [initial]);
+```
 - still iterates through an array
 - still expects a callfunction, but takes 2 arguments instead of 1
 - first argument is the accumulator
@@ -390,4 +396,3 @@ let value = arr.reduce(function(accumulator, item, index, array) {
 
 ## Most methods support "thisArg"
 - almost all array methods that call functions (find, filter, map, etc.) accept an optinal additional parameter thisArg
-
