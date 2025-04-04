@@ -401,9 +401,10 @@ let value = arr.reduce(function(accumulator, item, index, array) {
 ## Additional help from video
 https://www.youtube.com/watch?v=HB1ZC7czKRs
 
+### filter
 - can write functions in these methods like so:
 ```
-inventors = [{first: 'albert', last: 'einstein', passed: '1955'}, {first: 'christian', last: 'yarwood', passed: '1996'}, {etc.}, {etc.}]
+inventors = [{first: 'albert', last: 'einstein', year: '1900', passed: '1955'}, {first: 'christian', last: 'yarwood', year: '1900', passed: '1996'}, {etc.}, {etc.}]
 const example = inventors.filter(function(inventor) = {
     if (inventor.year < 1500 && inventor.year > 1600) {
         return true
@@ -412,4 +413,26 @@ const example = inventors.filter(function(inventor) = {
 })
 // or do it with an arrow function like so:
 const example = inventors.filter(inventor => inventor.year < 1500 && inventor.year > 1600)
+```
+
+- if console.log returns n object in an array, write console.table()
+
+### map
+```
+const = ordered = inventors.sort(function(a, b) {
+    if (a.year < b.year) {
+        return 1;
+    } else {
+        return -1;
+    }
+});
+// or something like this using ternerary operator:
+const ordered = inventors.sort((a, b) => if a.year > b.year ? 1 : -1);
+```
+
+### reduce
+```
+const totalYears = inventors.reduce((total, inventor) => {
+    return total + (inventor.passed - inventor.year)
+}, 0);
 ```
