@@ -181,6 +181,7 @@ const person2 = {
 
 ## Map method:
 - expects a callback function
+- returns the same number of items than the original array
 - automatically iterates over an array so we dont have to use a for loop. e.g.:
 ```
 function addOne(num) {
@@ -316,7 +317,7 @@ alert(user.name); // John
 
 ### filter
 - find method looks for the first instance of an element and returns true
-- arr.filter(fn) returns an array of all matching elements
+- arr.filter(fn) returns an array of all matching elements, which can be less than the original array
 - syntax:
 ```
 let results = arr.filter(function(item, index, array) {
@@ -396,3 +397,19 @@ let value = arr.reduce(function(accumulator, item, index, array) {
 
 ## Most methods support "thisArg"
 - almost all array methods that call functions (find, filter, map, etc.) accept an optinal additional parameter thisArg
+
+## Additional help from video
+https://www.youtube.com/watch?v=HB1ZC7czKRs
+
+- can write functions in these methods like so:
+```
+inventors = [{first: 'albert', last: 'einstein', passed: '1955'}, {first: 'christian', last: 'yarwood', passed: '1996'}, {etc.}, {etc.}]
+const example = inventors.filter(function(inventor) = {
+    if (inventor.year < 1500 && inventor.year > 1600) {
+        return true
+        // no need to have an else statement because only focuses on true or truthy returns
+    }
+})
+// or do it with an arrow function like so:
+const example = inventors.filter(inventor => inventor.year < 1500 && inventor.year > 1600)
+```
